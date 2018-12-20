@@ -1,7 +1,7 @@
 # Contributor: Patrick Jackson <PatrickSJackson gmail com>
 # Maintainer: Christoph Vigano <mail@cvigano.de>
 
-pkgname=st
+pkgname=ava_st
 pkgver=0.8.1
 pkgrel=1
 pkgdesc='A simple virtual terminal emulator for X.'
@@ -11,7 +11,7 @@ depends=('libxft' 'libxext' 'xorg-fonts-misc')
 makedepends=('ncurses')
 url="http://st.suckless.org"
 source=(https://github.com/alexvanaxe/ava_st/archive/master.zip)
-sha256sums=('091aac3cf2331262b3c75378a5975cca667fdea65e37972164b51a44192ba83d')
+sha256sums=('23a622bbd363055276d4fadcbf8a01ba77b159b751453bda831a217a603e5d75')
 
 prepare() {
   cd $srcdir/ava_st-master
