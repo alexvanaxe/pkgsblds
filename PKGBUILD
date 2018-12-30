@@ -4,7 +4,7 @@
 pkgname=ava_st
 pkgver=0.8.1
 pkgrel=1
-pkgdesc='A simple virtual terminal emulator for X.'
+pkgdesc='A simple virtual terminal emulator for X. Applyed scroll, alpha, icon hide...'
 arch=('i686' 'x86_64')
 license=('MIT')
 depends=('libxft' 'libxext' 'xorg-fonts-misc')
