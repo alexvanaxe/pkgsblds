@@ -1,0 +1,32 @@
+# Contributor: Patrick Jackson <PatrickSJackson gmail com>
+# Maintainer: Christoph Vigano <mail@cvigano.de>
+
+pkgname=ava_dmenu
+pkgver=4.8.0
+pkgrel=1
+pkgdesc='A personal compilation of dmenu'
+arch=('x86_64')
+license=('MIT')
+depends=()
+makedepends=('ncurses')
+url="http://st.suckless.org"
+source=(https://github.com/alexvanaxe/ava_dmenu/archive/master.zip)
+sha256sums=('56628babd3c2deffdb3d8072a405cb882aa46628a06ac2322b8d27805fe73d8f')
+
+prepare() {
+  cd $srcdir/ava_dmenu-master
+  # skip terminfo which conflicts with nsurses
+  sed -i '/tic /d' Makefile
+}
+
+build() {
+  cd $srcdir/ava_dmenu-master
+  make X11INC=/usr/include/X11 X11LIB=/usr/lib/X11
+}
+
+package() {
+  cd $srcdir/ava_dmenu-master
+  make PREFIX=/usr DESTDIR="$pkgdir" TERMINFO="$pkgdir/usr/share/terminfo" install
+  install -Dm644 LICENSE "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
+  install -Dm644 README "$pkgdir/usr/share/doc/$pkgname/README"
+}
