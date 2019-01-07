@@ -11,7 +11,7 @@ depends=('libxft' 'libxext' 'xorg-fonts-misc')
 makedepends=('ncurses')
 url="http://st.suckless.org"
 source=(https://github.com/alexvanaxe/ava_st/archive/master.zip)
-sha256sums=('66e73ad9ac342c99a39a98df8df48179af8ef5f9aa14735b4344891560469dc4')
+sha256sums=('c697a8a70d821410cddeba0027ac03a04948d64c6c3fff4b936434cac1e0753f')
 
 prepare() {
   cd $srcdir/ava_st-master
