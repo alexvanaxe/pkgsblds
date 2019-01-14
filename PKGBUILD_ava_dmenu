@@ -8,10 +8,11 @@ pkgdesc='A personal compilation of dmenu'
 arch=('x86_64')
 license=('MIT')
 depends=()
+provides=('dmenu')
 makedepends=('ncurses')
 url="http://st.suckless.org"
 source=(https://github.com/alexvanaxe/ava_dmenu/archive/master.zip)
-sha256sums=('af0abec0328e610efd5e692723ef81a0f6488b163619d49b50337a6fe5364e32')
+sha256sums=('860772c0c9b78481def535266fb3fc36fb2a801e3388ef64eb9d819cef9b6ea1')
 
 prepare() {
   cd $srcdir/ava_dmenu-master
