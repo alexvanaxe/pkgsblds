@@ -12,7 +12,7 @@ provides=('st')
 makedepends=('ncurses')
 url="http://st.suckless.org"
 source=(https://github.com/alexvanaxe/ava_st/archive/home.zip)
-sha256sums=('5fe8f6c590314cee728634873c4514591112f62b965e4c979a36280fcbc6c335')
+sha256sums=('fb32014ba506648db4c339dde9615752313547ac7e13eede22d9556d8eda5ee6')
 
 prepare() {
   cd $srcdir/ava_st-home
