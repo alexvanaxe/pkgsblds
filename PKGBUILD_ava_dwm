@@ -11,7 +11,7 @@ depends=('libx11' 'libxinerama' 'libxft' 'freetype2' 'st' 'dmenu')
 provides=('dwm')
 makedepends=('ncurses')
 source=(https://github.com/alexvanaxe/dwm/archive/alpha.zip)
-sha256sums=('c309770072cf7b2224225f3266ef10dc918ce5ac715bb010b1a4731bb973700b')
+sha256sums=('e93b2d7b9e3581ca6152a4a283f923ea28f2bc3232932a61b7ded95bda99e083')
 
 prepare() {
   cd $srcdir/dwm-alpha
