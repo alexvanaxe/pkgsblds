@@ -10,22 +10,22 @@ license=('MIT')
 depends=('libx11' 'libxinerama' 'libxft' 'freetype2' 'st' 'dmenu')
 provides=('dwm')
 makedepends=('ncurses')
-source=(https://github.com/alexvanaxe/dwm/archive/alpha.zip)
-sha256sums=('e93b2d7b9e3581ca6152a4a283f923ea28f2bc3232932a61b7ded95bda99e083')
+source=(https://github.com/alexvanaxe/dwm/archive/padrao.zip)
+sha256sums=('07cdecfedc8af7521456f127df63417c097a6a3cc517f23ea86ded02be23484e')
 
 prepare() {
-  cd $srcdir/dwm-alpha
+  cd $srcdir/dwm-padrao
   # skip terminfo which conflicts with nsurses
   sed -i '/tic /d' Makefile
 }
 
 build() {
-  cd $srcdir/dwm-alpha
+  cd $srcdir/dwm-padrao
   make X11INC=/usr/include/X11 X11LIB=/usr/lib/X11 FREETYPEINC=/usr/include/freetype2
 }
 
 package() {
-  cd $srcdir/dwm-alpha
+  cd $srcdir/dwm-padrao
   make PREFIX=/usr DESTDIR="$pkgdir" install
   install -m644 -D LICENSE "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
   install -m644 -D README "$pkgdir/usr/share/doc/$pkgname/README"
