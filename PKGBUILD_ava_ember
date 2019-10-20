@@ -1,0 +1,33 @@
+# Contributor: Patrick Jackson <PatrickSJackson gmail com>
+# Maintainer: Christoph Vigano <mail@cvigano.de>
+
+pkgname=ava_ember
+pkgver=1.0.0
+pkgrel=1
+pkgdesc='A cli book reader'
+arch=('x86_64')
+license=('MIT')
+depends=()
+provides=('ember')
+makedepends=('')
+url="https://github.com/zorac/ember"
+source=(https://github.com/zorac/ember/archive/master.zip)
+sha256sums=('860772c0c9b78481def535266fb3fc36fb2a801e3388ef64eb9d819cef9b6ea1')
+
+prepare() {
+  cd $srcdir/ava_ember-master
+  # skip terminfo which conflicts with nsurses
+  # sed -i '/tic /d' Makefile
+}
+
+build() {
+  cd $srcdir/ava_ember-master
+  perl Makefile.PL
+ # make X11INC=/usr/include/X11 X11LIB=/usr/lib/X11
+}
+
+package() {
+  cd $srcdir/ava_ember-master
+  perl Makefile.PL
+  make PREFIX=/usr DESTDIR="$pkgdir" install
+}

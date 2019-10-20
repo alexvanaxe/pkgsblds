@@ -1,0 +1,29 @@
+# Contributor: Patrick Jackson <PatrickSJackson gmail com>
+# Maintainer: Christoph Vigano <mail@cvigano.de>
+
+pkgname=ava_biblia
+pkgver=1.0.0
+pkgrel=1
+pkgdesc='A cmd bible'
+arch=('x86_64')
+license=('GNU')
+depends=()
+provides=('')
+makedepends=('')
+url=""
+source=(https://github.com/alexvanaxe/biblia/archive/master.zip)
+sha256sums=('c098119d8e71f6ebb0fbb79e0aee7f33ca927054001b9189bc70c9fd609c18b0')
+
+prepare() {
+  cd $srcdir/biblia-master/blb
+}
+
+build() {
+  cd $srcdir/biblia-master/blb
+  make
+}
+
+package() {
+  cd $srcdir/biblia-master/blb
+  make install
+}
