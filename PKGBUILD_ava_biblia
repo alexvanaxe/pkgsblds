@@ -8,11 +8,11 @@ pkgdesc='A cmd bible'
 arch=('x86_64')
 license=('GNU')
 depends=()
-provides=('')
-makedepends=('')
+provides=('ava_biblia')
+makedepends=()
 url=""
 source=(https://github.com/alexvanaxe/biblia/archive/master.zip)
-sha256sums=('9fc7fe611a664066ea257bff225132cd9f3f9cdf680568fe9626d6a034ff95b0')
+sha256sums=('854dce7be174ff192d03a42eef827abebbcea010d3aaec16e3bfcb3761adff02')
 
 prepare() {
   cd $srcdir/biblia-master/blb
