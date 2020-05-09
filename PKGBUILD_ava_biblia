@@ -12,7 +12,7 @@ provides=('')
 makedepends=('')
 url=""
 source=(https://github.com/alexvanaxe/biblia/archive/master.zip)
-sha256sums=('c098119d8e71f6ebb0fbb79e0aee7f33ca927054001b9189bc70c9fd609c18b0')
+sha256sums=('9fc7fe611a664066ea257bff225132cd9f3f9cdf680568fe9626d6a034ff95b0')
 
 prepare() {
   cd $srcdir/biblia-master/blb
@@ -25,5 +25,5 @@ build() {
 
 package() {
   cd $srcdir/biblia-master/blb
-  make install
+  make PREFIX=/usr DESTDIR="$pkgdir" install
 }
