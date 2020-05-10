@@ -12,7 +12,7 @@ provides=('ava_biblia')
 makedepends=()
 url=""
 source=(https://github.com/alexvanaxe/biblia/archive/master.zip)
-sha256sums=('25d6494fe1794a66cc85604572dd36d644cf00441bd5099e71041f22f075219c')
+sha256sums=('0c0f8b5986fc5373dc7974f9b6dabb9fa89e96901d8c750861b5b0eb63ea0d64')
 
 prepare() {
   cd $srcdir/biblia-master/blb
