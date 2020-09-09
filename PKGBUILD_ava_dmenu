@@ -2,7 +2,7 @@
 # Maintainer: Christoph Vigano <mail@cvigano.de>
 
 pkgname=ava_dmenu
-pkgver=4.8.0
+pkgver=5.0.0
 pkgrel=1
 pkgdesc='A personal compilation of dmenu'
 arch=('x86_64')
@@ -12,7 +12,7 @@ provides=('dmenu')
 makedepends=('ncurses')
 url="http://st.suckless.org"
 source=(https://github.com/alexvanaxe/ava_dmenu/archive/master.zip)
-sha256sums=('c22091724a5257eec1918e17a3e9f7a6ca914bb597af38f37830d97ec0fc0c3c')
+sha256sums=('f03a925669e90c4b5e25794679cc8b51f4cdf7b70b3cf28fd2c740a42e7ff3fd')
 
 prepare() {
   cd $srcdir/ava_dmenu-master
