@@ -12,7 +12,7 @@ provides=('dmenu')
 makedepends=('ncurses')
 url="http://st.suckless.org"
 source=(https://github.com/alexvanaxe/ava_dmenu/archive/master.zip)
-sha256sums=('f03a925669e90c4b5e25794679cc8b51f4cdf7b70b3cf28fd2c740a42e7ff3fd')
+md5sums=('SKIP')
 
 prepare() {
   cd $srcdir/ava_dmenu-master
