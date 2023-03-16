@@ -46,7 +46,7 @@ GPM=              # Mouse support in Linux console using gmpd.
 NOTKIT=           # Use no toolkit widgets. Like B&W Twm (001d sk00l).
                   # Bitmap fonts only, 1337!
                
-PGTK="YES"        # Use native GTK3 build. Supports Wayland, yay!
+PGTK="NO"        # Use native GTK3 build. Supports Wayland, yay!
 
 GTK3=             # The new GTK2. Really, why would you?
 
