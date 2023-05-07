@@ -3,7 +3,7 @@
 
 _pkgname=bspwm
 pkgname=ava_${_pkgname}-git
-pkgver=0.0.99.r0.g21df234
+pkgver=0.0.99.r18.gaf4ba8a
 pkgrel=1
 pkgdesc='A tiling window manager based on binary space partitioning'
 arch=('i686' 'x86_64')
